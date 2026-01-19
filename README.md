@@ -33,3 +33,12 @@ A responsive React-based client for the Quote Journal application. This interfac
    ```bash
    git clone [https://github.com/shrutzzz01/quote-journal-frontend.git](https://github.com/shrutzzz01/quote-journal-frontend.git)
    cd quote-journal-frontend
+2. Install dependencies:
+   ```bash
+   npm install
+3. Environment Configuration: Create a .env file in the root directory and add the backend API URL:
+   ```bash
+   REACT_APP_API_URL=http://localhost:8080/api
+4. Run the application:
+   ```bash
+   npm start
