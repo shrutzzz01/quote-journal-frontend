@@ -118,7 +118,7 @@ function Dashboard() {
           <tbody>
             {users.map((user) => (
               <tr key={user.userId} style={styles.tr}>
-                <td style={{ ...styles.td, color: '#666', fontSize: '0.85rem' }}>{user.id}</td>
+                <td style={{ ...styles.td, color: '#666', fontSize: '0.85rem' }}>{user.userId}</td>
                 <td style={{ ...styles.td, fontWeight: '500' }}>{user.name}</td>
                 <td style={styles.td}>{user.email}</td>
                 <td style={styles.td}>
@@ -131,13 +131,13 @@ function Dashboard() {
                 </td>
                 <td style={styles.td}>
                   <button
-                    onClick={() => handleToggleRole(user.id, user.role)}
+                    onClick={() => handleToggleRole(user.userId, user.role)}
                     style={styles.roleButton}
                   >
                     Toggle Role
                   </button>
                   <button
-                    onClick={() => handleDeleteUser(user.id)}
+                    onClick={() => handleDeleteUser(user.userId)}
                     style={styles.deleteButton}
                   >
                     Delete
