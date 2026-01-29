@@ -127,8 +127,7 @@ function Dashboard() {
                   </span>
                 </td>
                 <td style={styles.td}>
-                    {console.log('User check:', user)}
-                  {user.isVerified === true ? '✅' : '❌'}
+                  {user.verified ? '✅' : '❌'}
                 </td>
                 <td style={styles.td}>
                   <button
