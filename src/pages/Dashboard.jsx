@@ -56,10 +56,13 @@ function Dashboard() {
     }
   };
 
-  const handleToggleRole = async (userId, currentRole) => {
-    const newRole = currentRole === 'ADMIN' ? 'USER' : 'ADMIN';
+  const handleToggleRole = async (user, currRole) => {
+    const newRole = currRole === 'ADMIN' ? 'USER' : 'ADMIN';
     try {
-      await API.put(`/admin/users/${userId}/role`, { role: newRole });
+        await API.put('/admin/update', {
+                 userId: user.userId,
+                 role: newRole
+             });
       fetchDashboardData();
     } catch (error) {
       console.error('Error updating user role:', error);
@@ -131,7 +134,7 @@ function Dashboard() {
                 </td>
                 <td style={styles.td}>
                   <button
-                    onClick={() => handleToggleRole(user.userId, user.role)}
+                    onClick={() => handleToggleRole(user, user.role)}
                     style={styles.roleButton}
                   >
                     Toggle Role
