@@ -47,7 +47,7 @@ function Dashboard() {
   const handleDeleteUser = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        await API.delete(`/admin/users/${userId}`);
+        await API.delete(`/admin/deleteUser/${userId}`);
         fetchDashboardData();
       } catch (error) {
         console.error('Error deleting user:', error);
@@ -59,7 +59,7 @@ function Dashboard() {
   const handleToggleRole = async (user, currRole) => {
     const newRole = currRole === 'ADMIN' ? 'USER' : 'ADMIN';
     try {
-        await API.put('/admin/update', {
+        await API.put('/admin/updateRole', {
                  userId: user.userId,
                  role: newRole
              });
