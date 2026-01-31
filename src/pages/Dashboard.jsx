@@ -48,7 +48,7 @@ function Dashboard() {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
         await API.delete(`/admin/deleteUser/${userId}`);
-        fetchDashboardData();
+        await fetchDashboardData();
       } catch (error) {
         console.error('Error deleting user:', error);
         alert('Failed to delete user');
@@ -63,7 +63,7 @@ function Dashboard() {
                  userId: user.userId,
                  role: newRole
              });
-      fetchDashboardData();
+        await fetchDashboardData();
     } catch (error) {
       console.error('Error updating user role:', error);
       alert('Failed to update user role');
