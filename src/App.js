@@ -36,7 +36,7 @@ function App() {
           />
 
           {/* Default redirect */}
-          <Route path="/" element={<Navigate to="/auth/login" />} />
+          <Route path="/" element={<Navigate to="/auth" />} />
         </Routes>
       </div>
     </Router>
