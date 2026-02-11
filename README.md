@@ -5,7 +5,7 @@ A responsive React-based client for the Quote Journal application. This interfac
 ---
 
 ## 🚀 Live Demo
-**Frontend:** [https://quote-journal-frontend.vercel.app](https://quote-journal-frontend.vercel.app)  
+**Frontend:** [[https://quote-journal-frontend.vercel.app](https://quote-journal-frontend-seven.vercel.app/auth)  
 **Backend API:** [https://quote-journal-backend.onrender.com/api](https://quote-journal-backend.onrender.com/api)
 
 ---
